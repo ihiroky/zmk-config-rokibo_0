@@ -1,0 +1,5 @@
+config SHIELD_ROKIBO_0_LEFT
+    def_bool $(shields_list_contains,rokibo_0_left)
+
+config SHIELD_ROKIBO_0_RIGHT
+    def_bool $(shields_list_contains,rokibo_0_right)

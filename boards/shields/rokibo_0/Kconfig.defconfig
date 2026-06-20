@@ -1,0 +1,22 @@
+if SHIELD_ROKIBO_0_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "rokibo_0"
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif # SHIELD_ROKIBO_0_RIGHT
+
+if SHIELD_ROKIBO_0_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "rokibo_0"
+
+config ZMK_SPLIT
+    default y
+
+endif # SHIELD_ROKIBO_0_LEFT

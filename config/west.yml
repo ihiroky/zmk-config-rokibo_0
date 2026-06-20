@@ -1,0 +1,21 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: ihiroky
+      url-base: https://github.com/ihiroky
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: v0.3-branch
+      import: app/west.yml
+    - name: zmk-pmw3610-driver
+      remote: ihiroky
+      revision: main
+    - name: zmk-rgbled-widget
+      remote: caksoylar
+      revision: v0.3-branch
+  self:
+    path: config
