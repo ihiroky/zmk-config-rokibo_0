@@ -10,13 +10,11 @@
     tapping-term-ms = <200>;
     quick-tap-ms = <200>;
 };
-
 &lt {
     flavor = "hold-preferred";
     tapping-term-ms = <200>;
     quick-tap-ms = <200>;
 };
-
 &trackball {
     scroll-layers = <6>;
     workspace_actions {
@@ -53,6 +51,7 @@
     };
 };
 
+
 / {
     behaviors {
         mb1_lc_mb4: mb1_lc_mb4_node {
@@ -68,7 +67,6 @@
             mods = <(MOD_LCTL)>;
         };
     };
-
     macros {
         fzf: macro_node {
             compatible = "zmk,behavior-macro";
@@ -77,8 +75,10 @@
             tap-ms = <10>;
         };
     };
+
     keymap {
         compatible = "zmk,keymap";
+
 
         default_layer {
             bindings = <
@@ -103,16 +103,16 @@
 &kp F1        &kp F2   &kp F3   &kp F4   &kp F5           &kp PRINTSCREEN  &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &kp F20          &kp C_VOLUME_UP
 &kp F6        &kp F7   &kp F8   &kp F9   &kp F10          &kp LEFT_ARROW   &kp DOWN_ARROW        &kp UP_ARROW          &kp RIGHT_ARROW  &kp C_MUTE
 &kp F11       &kp F12  &kp F13  &kp F14  &kp F15          &kp HOME         &kp PAGE_DOWN         &kp PAGE_UP           &kp END          &kp C_VOLUME_DOWN
-&kp LEFT_GUI  &trans   &trans   &trans   &trans   &trans  &trans           &kp RIGHT_ALT  &trans                                      &trans
+&kp LEFT_GUI  &trans   &trans   &trans   &trans   &trans  &trans           &kp RIGHT_ALT                               &trans           &trans
             >;
         };
 
         NUMBER {
             bindings = <
-&trans             &trans  &trans  &trans  &trans          &kp JP_PLUS   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp JP_ASTERISK
-&kp JP_UNDERSCORE  &trans  &trans  &fzf    &trans          &kp JP_MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &kp JP_SLASH
-&trans             &trans  &trans  &trans  &trans          &kp JP_CARET  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp JP_EQUAL
-&trans             &trans  &trans  &trans  &trans  &trans  &kp JP_DOT    &kp N0                      &kp JP_PERCENT  &kp JP_COMMA
+&trans         &trans         &trans           &trans             &trans                     &kp JP_PLUS   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp JP_ASTERISK
+&kp LEFT_GUI   &kp LEFT_ALT   &kp LEFT_SHIFT   &kp LEFT_CONTROL   &kp JP_UNDERSCORE          &kp JP_MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &kp JP_SLASH
+&kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &trans                     &kp JP_CARET  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp JP_EQUAL
+&trans         &trans         &trans           &trans             &trans             &trans  &kp JP_DOT    &kp N0                      &kp JP_PERCENT  &kp JP_COMMA
             >;
         };
 
@@ -121,7 +121,7 @@
 &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3   &bt BT_SEL 4           &trans    &trans       &trans      &trans          &trans
 &trans         &studio_unlock  &sys_reset      &bootloader    &trans                 &ind_bat  &bootloader  &sys_reset  &studio_unlock  &kp NUMBER_0
 &bt BT_DISC 0  &bt BT_DISC 1   &bt BT_DISC 2   &bt BT_DISC 3  &bt BT_DISC 4          &ind_con  &trans       &trans      &trans          &trans
-&trans         &bt BT_CLR      &bt BT_CLR_ALL  &trans         &trans         &trans  &trans    &trans  &trans                         &trans
+&trans         &bt BT_CLR      &bt BT_CLR_ALL  &trans         &trans         &trans  &trans    &trans                   &trans          &trans
             >;
         };
 
@@ -130,18 +130,17 @@
 &trans         &trans         &trans           &trans             &trans          &trans  &kp F3    &kp F5    &kp F12   &trans
 &kp LEFT_GUI   &kp LEFT_ALT   &kp LEFT_SHIFT   &kp LEFT_CONTROL   &trans          &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
 &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &trans          &trans  &mkp MB4  &trans    &mkp MB5  &trans
-&trans         &trans         &trans           &trans             &trans  &trans  &trans  &trans  &trans              &trans
+&trans         &trans         &trans           &trans             &trans  &trans  &trans  &trans              &trans    &trans
             >;
         };
 
-        SCROLL {
+        SCROLL_MACRO {
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans         &trans             &trans           &trans         &trans
-&trans  &trans  &trans  &trans  &trans          &kp LEFT_GUI   &kp LEFT_CONTROL   &kp LEFT_SHIFT   &kp LEFT_ALT   &trans
+&trans  &trans  &trans  &fzf    &trans          &kp LEFT_GUI   &kp LEFT_CONTROL   &kp LEFT_SHIFT   &kp LEFT_ALT   &trans
 &trans  &trans  &trans  &trans  &trans          &kp RIGHT_GUI  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp RIGHT_ALT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans                                  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans                              &trans         &trans
             >;
         };
-
     };
 };
