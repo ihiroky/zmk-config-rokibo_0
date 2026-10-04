@@ -109,10 +109,10 @@
 
         NUMBER {
             bindings = <
-&trans         &trans         &trans           &trans             &trans                     &kp JP_PLUS   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp JP_ASTERISK
-&kp LEFT_GUI   &kp LEFT_ALT   &kp LEFT_SHIFT   &kp LEFT_CONTROL   &kp JP_UNDERSCORE          &kp JP_MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &kp JP_SLASH
-&kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &trans                     &kp JP_CARET  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp JP_EQUAL
-&trans         &trans         &trans           &trans             &trans             &trans  &kp JP_DOT    &kp N0                      &kp JP_PERCENT  &kp JP_COMMA
+&kp NUMBER_1       &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5            &kp NUMBER_6       &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0
+&kp JP_SLASH       &kp JP_ASTERISK  &kp JP_MINUS  &kp JP_PLUS   &kp JP_EQUAL            &kp JP_LPAREN      &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6   &kp JP_RPAREN
+&kp JP_UNDERSCORE  &kp JP_CARET     &kp JP_COMMA  &kp JP_DOT    &kp JP_PERCENT          &kp JP_LBRACKET    &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3   &kp JP_RBRACKET
+&trans             &trans           &trans        &trans        &trans          &trans  &kp RIGHT_CONTROL  &kp RIGHT_GUI                &kp RIGHT_ALT  &mt RIGHT_SHIFT INTERNATIONAL_1
             >;
         };
 
